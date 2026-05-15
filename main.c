@@ -82,3 +82,17 @@ void realizarDeposito(float *saldo) {
         printf("Erro: Valor de deposito deve ser positivo.\n");
     }
 }
+
+void realizarSaque(float *saldo) {
+    float valor;
+    printf("Digite o valor do saque: R$ ");
+    scanf("%f", &valor);
+    if (valor > 0 && valor <= *saldo) {
+        *saldo -= valor;
+        printf("Sucesso: Retire seu dinheiro abaixo.\n");
+    } else if (valor > *saldo) {
+        printf("Erro: Saldo insuficiente (Saldo atual: R$ %.2f).\n", *saldo);
+    } else {
+        printf("Erro: Valor invalido.\n");
+    }
+}
