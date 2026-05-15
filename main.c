@@ -34,3 +34,24 @@ int main() {
             while (getchar() != '\n'); 
             continue;
         }
+
+        switch (opcao) {
+            case 1:
+                consultarSaldo(saldo);
+                break;
+            case 2:
+                realizarDeposito(&saldo);
+                break;
+            case 3:
+                realizarSaque(&saldo);
+                break;
+            case 4:
+                printf("\nEncerrando sistema... Ate logo!\n");
+                break;
+            default:
+                printf("\nOpcao invalida! Tente novamente.\n");
+        }
+    } while (opcao != 4);
+
+    return 0;
+}
