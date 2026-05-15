@@ -55,3 +55,14 @@ int main() {
 
     return 0;
 }
+
+// --- IMPLEMENTAÇÃO DAS FUNÇÕES ---
+
+void exibirMenu() {
+    printf("\n---------- MENU ----------\n");
+    printf("1. Consultar Saldo\n");
+    printf("2. Deposito\n");
+    printf("3. Saque\n");
+    printf("4. Sair\n");
+    printf("--------------------------\n");
+}
