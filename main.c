@@ -70,3 +70,15 @@ void exibirMenu() {
 void consultarSaldo(float saldo) {
     printf("\n>>> Saldo atual: R$ %.2f\n", saldo);
 }
+
+void realizarDeposito(float *saldo) {
+    float valor;
+    printf("Digite o valor do deposito: R$ ");
+    scanf("%f", &valor);
+    if (valor > 0) {
+        *saldo += valor;
+        printf("Sucesso: R$ %.2f adicionados.\n", valor);
+    } else {
+        printf("Erro: Valor de deposito deve ser positivo.\n");
+    }
+}
