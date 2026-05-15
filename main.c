@@ -66,3 +66,7 @@ void exibirMenu() {
     printf("4. Sair\n");
     printf("--------------------------\n");
 }
+
+void consultarSaldo(float saldo) {
+    printf("\n>>> Saldo atual: R$ %.2f\n", saldo);
+}
