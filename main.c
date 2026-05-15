@@ -15,7 +15,7 @@ int verificarSenha();
 int main() {
     float saldo = 0.0;
     int opcao;
-    
+
     printf("--- BEM-VINDO AO SISTEMA ATM ---\n");
 
     // Validação de segurança inicial
@@ -27,3 +27,10 @@ int main() {
     do {
         exibirMenu();
         printf("Escolha uma opcao: ");
+
+        // Verifica se a entrada é um número para evitar loops infinitos
+        if (scanf("%d", &opcao) != 1) {
+            printf("Entrada invalida! Use apenas numeros.\n");
+            while (getchar() != '\n'); 
+            continue;
+        }
