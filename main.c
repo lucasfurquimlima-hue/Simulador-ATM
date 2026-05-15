@@ -15,3 +15,15 @@ int verificarSenha();
 int main() {
     float saldo = 0.0;
     int opcao;
+    
+    printf("--- BEM-VINDO AO SISTEMA ATM ---\n");
+
+    // Validação de segurança inicial
+    if (!verificarSenha()) {
+        printf("\nAcesso bloqueado. Senha incorreta.\n");
+        return 0; // Encerra o programa se a senha estiver errada
+    }
+
+    do {
+        exibirMenu();
+        printf("Escolha uma opcao: ");
