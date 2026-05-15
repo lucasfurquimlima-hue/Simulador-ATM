@@ -96,3 +96,16 @@ void realizarSaque(float *saldo) {
         printf("Erro: Valor invalido.\n");
     }
 }
+
+int verificarSenha() {
+    char senha_digitada[20];
+    printf("Digite sua senha de 4 digitos: ");
+    scanf("%s", senha_digitada);
+
+    // Agora o strcmp funcionará corretamente
+    if (strcmp(senha_digitada, PIN_CORRETO) == 0) {
+        return 1; // Senha correta
+    } else {
+        return 0; // Senha incorreta
+    }
+}
